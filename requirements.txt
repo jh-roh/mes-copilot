@@ -19,3 +19,6 @@ flake8               # 코드 린터 (스타일 및 오류 검사)
 mypy                 # 정적 타입 검사기
 pre-commit           # 커밋 전 자동 검사 훅 관리 도구
 jwt                  # JSON Web Token 라이브러리
+sphinx               # 문서 생성 도구
+sphinx-rtd-theme     # Read the Docs 테마
+sphinx-autodoc-typehints  # 자동 문서 생성을 위한 타입 힌트 지원

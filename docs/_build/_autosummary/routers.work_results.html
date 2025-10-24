@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>routers.work_results &mdash; MES Copilot 0.1.0 문서</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d6a8a7ef"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=afa94a99"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="prev" title="routers.weather" href="routers.weather.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MES Copilot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="routers.html">routers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="routers.data_summary.html">routers.data_summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routers.orders.html">routers.orders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routers.weather.html">routers.weather</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">routers.work_results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#routers.work_results.create_work_result"><code class="docutils literal notranslate"><span class="pre">create_work_result()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routers.work_results.get_work_result"><code class="docutils literal notranslate"><span class="pre">get_work_result()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routers.work_results.list_work_results"><code class="docutils literal notranslate"><span class="pre">list_work_results()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routers.work_results.list_work_results_by_order"><code class="docutils literal notranslate"><span class="pre">list_work_results_by_order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routers.work_results.update_work_result"><code class="docutils literal notranslate"><span class="pre">update_work_result()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routers.work_results.delete_work_result"><code class="docutils literal notranslate"><span class="pre">delete_work_result()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MES Copilot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="routers.html">routers</a></li>
+      <li class="breadcrumb-item active">routers.work_results</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_autosummary/routers.work_results.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-routers.work_results">
+<span id="routers-work-results"></span><h1>routers.work_results<a class="headerlink" href="#module-routers.work_results" title="Link to this heading"></a></h1>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Depends</span></code>([dependency, use_cache])</p></td>
+<td><p>Declare a FastAPI dependency.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#routers.work_results.create_work_result" title="routers.work_results.create_work_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_work_result</span></code></a>(work_result[, db])</p></td>
+<td><p>Create a new work result</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#routers.work_results.delete_work_result" title="routers.work_results.delete_work_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_work_result</span></code></a>(work_result_id[, db])</p></td>
+<td><p>Delete a specific work result</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_db</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#routers.work_results.get_work_result" title="routers.work_results.get_work_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_work_result</span></code></a>(work_result_id[, db])</p></td>
+<td><p>Get a specific work result by ID</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#routers.work_results.list_work_results" title="routers.work_results.list_work_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_results</span></code></a>([db])</p></td>
+<td><p>Get all work results</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#routers.work_results.list_work_results_by_order" title="routers.work_results.list_work_results_by_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_results_by_order</span></code></a>(order_id[, db])</p></td>
+<td><p>Get all work results for a specific order</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#routers.work_results.update_work_result" title="routers.work_results.update_work_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_work_result</span></code></a>(work_result_id, work_result)</p></td>
+<td><p>Update a specific work result</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">APIRouter</span></code>(*[, prefix, tags, dependencies, ...])</p></td>
+<td><p><cite>APIRouter</cite> class, used to group <em>path operations</em>, for example to structure an app in multiple files.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session</span></code>([bind, autoflush, future, ...])</p></td>
+<td><p>Manages persistence operations for ORM-mapped objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkResultCreate</span></code>(**data)</p></td>
+<td><p>Schema for work result creation</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkResultResponse</span></code>(**data)</p></td>
+<td><p>Schema for work result responses</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkResultUpdate</span></code>(**data)</p></td>
+<td><p>Schema for work result updates</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Exceptions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">HTTPException</span></code>(status_code[, detail, headers])</p></td>
+<td><p>An HTTP exception you can raise in your own code to show errors to the client.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">SQLAlchemyError</span></code>(*arg, **kw)</p></td>
+<td><p>Generic error class.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="routers.work_results.create_work_result">
+<span class="sig-prename descclassname"><span class="pre">routers.work_results.</span></span><span class="sig-name descname"><span class="pre">create_work_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/routers/work_results.html#create_work_result"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#routers.work_results.create_work_result" title="Link to this definition"></a></dt>
+<dd><p>Create a new work result</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_result</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkResultCreate</span></code></span>)</p></li>
+<li><p><strong>db</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="routers.work_results.get_work_result">
+<span class="sig-prename descclassname"><span class="pre">routers.work_results.</span></span><span class="sig-name descname"><span class="pre">get_work_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_result_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/routers/work_results.html#get_work_result"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#routers.work_results.get_work_result" title="Link to this definition"></a></dt>
+<dd><p>Get a specific work result by ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_result_id</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>)</p></li>
+<li><p><strong>db</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="routers.work_results.list_work_results">
+<span class="sig-prename descclassname"><span class="pre">routers.work_results.</span></span><span class="sig-name descname"><span class="pre">list_work_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/routers/work_results.html#list_work_results"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#routers.work_results.list_work_results" title="Link to this definition"></a></dt>
+<dd><p>Get all work results</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>db</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="routers.work_results.list_work_results_by_order">
+<span class="sig-prename descclassname"><span class="pre">routers.work_results.</span></span><span class="sig-name descname"><span class="pre">list_work_results_by_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/routers/work_results.html#list_work_results_by_order"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#routers.work_results.list_work_results_by_order" title="Link to this definition"></a></dt>
+<dd><p>Get all work results for a specific order</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order_id</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>)</p></li>
+<li><p><strong>db</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="routers.work_results.update_work_result">
+<span class="sig-prename descclassname"><span class="pre">routers.work_results.</span></span><span class="sig-name descname"><span class="pre">update_work_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_result_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">work_result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/routers/work_results.html#update_work_result"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#routers.work_results.update_work_result" title="Link to this definition"></a></dt>
+<dd><p>Update a specific work result</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_result_id</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>)</p></li>
+<li><p><strong>work_result</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkResultUpdate</span></code></span>)</p></li>
+<li><p><strong>db</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="routers.work_results.delete_work_result">
+<span class="sig-prename descclassname"><span class="pre">routers.work_results.</span></span><span class="sig-name descname"><span class="pre">delete_work_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_result_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/routers/work_results.html#delete_work_result"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#routers.work_results.delete_work_result" title="Link to this definition"></a></dt>
+<dd><p>Delete a specific work result</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_result_id</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>)</p></li>
+<li><p><strong>db</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="routers.weather.html" class="btn btn-neutral float-left" title="routers.weather" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
